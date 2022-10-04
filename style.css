@@ -460,7 +460,7 @@ section .title.dark::after{
     background: none;
   }
 
-.animate{
+/* .animate{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -538,7 +538,7 @@ section .title.dark::after{
         0 0 240px #00b3ff,0 0 340px #00b3ff;
         
     }
-  }
+  } */
 
 footer{
     background: #111;
