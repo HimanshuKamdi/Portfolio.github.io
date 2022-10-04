@@ -317,7 +317,7 @@ section .title.dark::after{
     color: crimson;
     background: none;
 }
-.skills .skills-content .right .bars{
+/* .skills .skills-content .right .bars{
     margin-bottom: 15px;
 }
 .skills .skills-content .right .info{
@@ -343,8 +343,8 @@ section .title.dark::after{
     left: 0;
     top: 0;
     background: crimson;
-}
-.skills-content .right .html::before{
+} */
+/* .skills-content .right .html::before{
     width: 80%;
 }
 .skills-content .right .css::before{
@@ -361,7 +361,25 @@ section .title.dark::after{
 }
 .skills-content .right .c::before{
     width: 30%;
-}
+} */
+.skills dt:after {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 0.5rem;
+    content: "";
+    display: block;
+    }
+.skills dd {
+    background: red;
+    width: 0;
+    height: 0.5rem;
+    position: relative;
+    top: -0.5rem;
+    }
+    .skills dd {
+    background: crimson;
+    }
+    
 
 .contact.dark{
         color:#fff;
@@ -395,6 +413,27 @@ section .title.dark::after{
 .contact .contact-content .row i{
     font-size: 25px;
     color: crimson;
+}
+.contact .contact-content .social {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.contact .contact-content .social a{
+    position: relative;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+}
+.contact .contact-content .social a:hover{
+    transition: .1s ease-in;
+    transform: scale(1.1);
+}
+.contact .contact-content .social i{
+    
+    color: crimson;
+    font-size: 30px;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
