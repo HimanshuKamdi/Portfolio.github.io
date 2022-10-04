@@ -81,12 +81,13 @@ section .title.dark::after{
     display: flex;
     align-items: center;
     justify-content:space-between;
+    flex-wrap: wrap;
 }
 .navbar .logo a{
     color: #fff;
     font-size: 35px;
     font-weight: 600;
-    margin-right: 280px;
+    /* margin-right: 280px; */
 }
 .navbar .logo a span{
     color: crimson;
@@ -95,6 +96,9 @@ section .title.dark::after{
 .navbar.sticky .logo a span{
     color: #fff;
     transition: all 0.3s ease;
+}
+.navbar .content{
+    display: inline-flex;
 }
 .navbar .menu li{
     list-style: none;
@@ -105,10 +109,7 @@ section .title.dark::after{
     color: #fff;
     font-size: 20px;
     font-weight: 500;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding:0  20px;
     line-height: 24px;
     transition: color 0.3s ease-in-out;
 }
@@ -128,6 +129,7 @@ section .title.dark::after{
     color: #fff;
     font-size: 20px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .mode-btn p.dark::before{
@@ -564,7 +566,7 @@ footer p{
     .menu-btn{
         display: block;
         z-index: 999;
-        margin-left: 40px;
+        margin-left: 20px;
     }
     .menu-btn i.active:before{
         content: "\f00d";
