@@ -790,8 +790,8 @@ footer p{
     .max-width{
     max-width: 98vw;
     padding: 0 30px;
-    /* margin: 10px;} */
-    .title{
+    /* margin: 10px; */}
+    section .title{
         font-size: 30px;
     }
     .mode-btn{
