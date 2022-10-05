@@ -22,9 +22,11 @@ $(document).ready(function(){
         $('.navbar .menu').toggleClass("dark");
         $('.mode-btn p').toggleClass("dark");
         $('.about').toggleClass("dark");
+        $('.about .about-content .left img:nth-child(1)').toggleClass("dark");
+        $('.about .about-content .left img:nth-child(2)').toggleClass("dark");
         $('.skills').toggleClass("dark");
         $('.contact').toggleClass("dark");
-        $('.animate').toggleClass("dark");
+        $('.contact .contact-content .left .icons').toggleClass("dark");
 
     });
 
@@ -55,7 +57,7 @@ $(window).scroll(function() {
       $(this).animate({
         //finds the width from the data-percent attribute
         width: $(this).data('percent') + '%'
-      }, 5000);
+      }, 3000);
     });
   }
 });
