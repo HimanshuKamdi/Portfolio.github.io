@@ -195,9 +195,9 @@ section .title.dark::after{
     transition: color 0.3s ease-in-out;
 }
 .navbar li a:hover {
-    transform: scale(1.1);
-    transition: all .1s ease;
-    -webkit-transition: all 1s ease;
+    transform: scale(1.2);
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
   }
 
 /* .navbar li a:before,
