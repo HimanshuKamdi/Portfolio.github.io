@@ -200,7 +200,7 @@ section .title.dark::after{
     -webkit-transition: all 1s ease;
   }
 
-.navbar li a:before,
+/* .navbar li a:before,
 .navbar li a:after {
   content: '';
   position: absolute;
@@ -218,9 +218,8 @@ section .title.dark::after{
 .navbar li a:after {
   background: #fff;
   right: 0;
-}
-
-.navbar li a:hover:before {
+} 
+ .navbar li a:hover:before {
   background: #fff;
   width: 100%;
   transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
@@ -229,7 +228,7 @@ section .title.dark::after{
  .navbar li a:hover:after {
   background: transparent;
   width: 100%;
-} 
+}  */
 .nav-btn{
     display: flex;
 }
@@ -405,15 +404,14 @@ section .title.dark::after{
 .education .title::after{
     content: "what I know";
 }
-.education span{
-}
+/* .education span{
+} */
 .timeline {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
   }
   
-  /* The actual timeline (the vertical ruler) */
   .timeline::after {
     content: '';
     position: absolute;
@@ -425,7 +423,6 @@ section .title.dark::after{
     margin-left: -3px;
   }
   
-  /* Container around content */
   .container {
     padding: 10px 50px;
     position: relative;
@@ -433,7 +430,6 @@ section .title.dark::after{
     width: 50%;
   }
   
-  /* The circles on the timeline */
   .container::after {
     content: '';
     position: absolute;
@@ -447,17 +443,14 @@ section .title.dark::after{
     z-index: 1;
   }
   
-  /* Place the container to the left */
   .left {
     left: 0;
   }
   
-  /* Place the container to the right */
   .right {
     left: 50%;
   }
   
-  /* Add arrows to the left container (pointing right) */
   .left::before {
     content: " ";
     height: 0;
@@ -471,7 +464,6 @@ section .title.dark::after{
     border-color: transparent transparent transparent  #61D4E8;
   }
   
-  /* Add arrows to the right container (pointing left) */
   .right::before {
     content: " ";
     height: 0;
@@ -482,37 +474,32 @@ section .title.dark::after{
     left: 30px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent  #61D4E8 transparent transparent;
   }
   
-  /* Fix the circle for containers on the right side */
   .right::after {
     left: -16px;
   }
   
-  /* The actual content */
  .education .content {
     padding: 20px 30px;
+    color: white;
     background-color:  #f9cc51;
     position: relative;
     border-radius: 6px;
    }
   
-  /* Media queries - Responsive timeline on screens less than 600px wide */
   @media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
     .timeline::after {
       left: 31px;
     }
   
-  /* Full-width containers */
     .container {
       width: 100%;
       padding-left: 70px;
       padding-right: 25px;
     }
   
-  /* Make sure that all arrows are pointing leftwards */
     .container::before {
       left: 60px;
       border: medium solid white;
@@ -520,20 +507,17 @@ section .title.dark::after{
       border-color: transparent white transparent transparent;
     }
   
-  /* Make sure all circles are at the same spot */
     .left::after, .right::after {
       left: 15px;
     }
   
-  /* Make all right containers behave like the left ones */
     .right {
       left: 0%;
     }
   }
-/* .skills{
-    color:#fff;
-    background: #0F1111;
-} */
+
+
+
 .skills.dark{
     color: #fff;
     background: #111;
@@ -771,10 +755,10 @@ footer p{
         font-size: 25px;
     }
     .home .home-content .text-2{
-        font-size: 70px;
+        font-size: 55px;
     }
     .home .home-content .text-3{
-        font-size: 35px;
+        font-size: 30px;
     }
     .home .home-content a{
         font-size: 23px;
@@ -801,3 +785,41 @@ footer p{
     }
     
 }
+
+@media(max-width: 500px){
+    .max-width{
+    max-width: 98vw;
+    padding: 0 30px;
+    /* margin: 10px;} */
+    .title{
+        font-size: 30px;
+    }
+    .mode-btn{
+        font-size: 15px;
+    }
+    .menu-btn{
+        font-size: 18px;
+    }
+    .navbar .logo a{
+        font-size: 25px;
+    }
+    /* .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    } */
+    section .title::after{
+        font-size: 14px;
+    }
+}
+@media(max-width: 300px){
+    .home .home-content .text-2{
+        font-size: 45px;
+    }
+    .home .home-content .text-3{
+        font-size: 30px;
+    }
+}
+
+

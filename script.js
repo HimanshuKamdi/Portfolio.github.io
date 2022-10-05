@@ -28,6 +28,7 @@ $(document).ready(function(){
         $('.about').toggleClass("dark");
         $('.about .about-content .left img:nth-child(1)').toggleClass("dark");
         $('.about .about-content .left img:nth-child(2)').toggleClass("dark");
+        $('.education').toggleClass("dark");
         $('.skills').toggleClass("dark");
         $('.contact').toggleClass("dark");
         $('.contact .contact-content .left .icons').toggleClass("dark");
