@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    $(window).bind("load", function () {
+    jQuery("#loader").fadeOut("slow");
+    jQuery("#preloader").delay(0).fadeOut();
+});
     $(window).scroll(function(){
         if(this.scrollY > 20){
             $('.navbar').addClass('sticky');

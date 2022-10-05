@@ -65,6 +65,84 @@ section .title.dark::after{
     background: #111;
 }
 
+#preloader {
+    position: fixed;
+    z-index: 1800;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff
+    }
+    .no-js #preloader,
+    .oldie #preloader {
+    display: none
+    }
+    #loader {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    transform: rotate(165deg);
+    }
+    #loader {
+    position: absolute;
+    top: calc(50% - 1.25em);
+    left: calc(50% - 1.25em);
+    }
+    #loader:before, #loader:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    transform: translate(-50%, -50%);
+    }
+    #loader:before {
+    animation: before 2s ;
+    }
+    #loader:after {
+    animation: after 2s ;
+    }
+    @keyframes before {
+    0% {
+    width: 0.5em;
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+    35% {
+    width: 2.5em;
+    box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+    }
+    70% {
+    width: 0.5em;
+    box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+    100% {
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+    }
+    @keyframes after {
+    0% {
+    height: 0.5em;
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+    35% {
+    height: 2.5em;
+    box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+    }
+    70% {
+    height: 0.5em;
+    box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+    }
+    100% {
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+    }
+
 .navbar{
     position: fixed;
     width: 100%;
@@ -100,6 +178,9 @@ section .title.dark::after{
 .navbar .content{
     display: inline-flex;
 }
+.navbar ul{
+    margin-right: 20px;
+}
 .navbar .menu li{
     list-style: none;
     display: inline-block;
@@ -114,8 +195,8 @@ section .title.dark::after{
     transition: color 0.3s ease-in-out;
 }
 .navbar li a:hover {
-    color: crimson;
-    transition: all 1s ease;
+    transform: scale(1.1);
+    transition: all .1s ease;
     -webkit-transition: all 1s ease;
   }
 
@@ -124,9 +205,9 @@ section .title.dark::after{
   content: '';
   position: absolute;
   width: 0%;
-  height: 1px;
+  height: 2px;
   bottom: -1px;
-  background: rgb(13, 26, 38);
+  background: #fff;
 }
 
 .navbar li a:before {
@@ -135,20 +216,20 @@ section .title.dark::after{
 }
 
 .navbar li a:after {
-  background: rgb(13, 26, 38);
+  background: #fff;
   right: 0;
 }
 
 .navbar li a:hover:before {
-  background: rgb(13, 26, 38);
+  background: #fff;
   width: 100%;
   transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
 }
 
-.navbar li a:hover:after {
+ .navbar li a:hover:after {
   background: transparent;
   width: 100%;
-}
+} 
 .nav-btn{
     display: flex;
 }
@@ -314,7 +395,141 @@ section .title.dark::after{
     color: crimson;
     background: none;
 }
-
+.education {
+    font-family: Helvetica, sans-serif;
+}
+.education.dark{
+    color: #fff;
+    background: #0F1111;
+}
+.education .title::after{
+    content: "what I know";
+}
+.education span{
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color:  crimson;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 50px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #61D4E8;
+    border: 4px solid #2DA1E7;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent  #61D4E8;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+ .education .content {
+    padding: 20px 30px;
+    background-color:  #f9cc51;
+    position: relative;
+    border-radius: 6px;
+   }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
 /* .skills{
     color:#fff;
     background: #0F1111;
