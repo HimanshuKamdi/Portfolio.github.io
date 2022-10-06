@@ -25,6 +25,7 @@ $(document).ready(function(){
         $('section .title').toggleClass("dark");
         $('.navbar .menu').toggleClass("dark");
         $('.mode-btn p').toggleClass("dark");
+        $('.home').toggleClass("dark");
         $('.about').toggleClass("dark");
         $('.about .about-content .left img:nth-child(1)').toggleClass("dark");
         $('.about .about-content .left img:nth-child(2)').toggleClass("dark");
